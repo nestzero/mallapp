@@ -1,0 +1,54 @@
+<template>
+  <div id="content">
+    <div class="categories">
+        <div class="categories_item" v-for="(item,index) in categories" :key="index">
+          {{item.name}}
+        </div>
+    </div>
+
+    <div class="product">
+
+    </div>
+
+  </div>
+</template>
+
+<script>
+const categories = [
+  { name: '全部商品', tab: 'all' },
+  { name:'秒杀', tab: 'seckill' },
+  { name: '新鲜水果', tab: 'fruit'}
+]
+
+export default {
+  setup() {
+    return {categories}
+  },
+}
+</script>
+
+<style lang="scss" scoped>
+@import '@/assets/css/viriables.scss';
+@import '../../style/mixins.scss';
+
+#content{
+  display: flex;
+  position: absolute;
+
+  left:0;
+  right:0;
+
+  top: 1.5rem;
+  bottom: .5rem;
+}
+
+.categories{
+  overflow-y: scroll;
+  height: 100%;
+  width: .76rem;
+
+  &_item{
+    text-align: center;
+  }
+}
+</style>

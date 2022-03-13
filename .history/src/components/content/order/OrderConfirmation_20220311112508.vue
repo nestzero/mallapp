@@ -1,0 +1,23 @@
+<template>
+  <div id="order-confirmation">
+    <div class="order">
+
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  setup() {
+    
+  },
+}
+</script>
+
+<style lang="scss" scoped>
+@import "@/assets/css/viriables.scss";
+
+.order{
+  background: $bgColor;
+}
+</style>
