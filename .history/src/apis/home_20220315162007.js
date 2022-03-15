@@ -17,10 +17,10 @@ export function getHotListByShopId(id) {
     request.get(`/api/shop/${id}`)
       .then((response) => {
         resolve(response.data)
-      })
-      .catch(err => {
+      }, err => {
         reject(err)
       })
+
   })
 }
  

@@ -16,12 +16,11 @@ export function orderCommit(data) {
 export function getOrderList() {
   return new Promise((resolve, reject) => {
     
-    request.get('/api/order')
-    .then((response) => {
+    request.get('/api/order').then((response) => {
       resolve(response.data)
-    })
-    .catch(err => {
+    }, err => {
       reject(err)
     })
+
   })
 }
